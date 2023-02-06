@@ -230,10 +230,15 @@ footer a {
     }
 }
 
+/* fixes header img distortion issue on mobile, and reduces footer font-size to prevent overflow */
 @media screen and (max-width: 360px) {
     #DSH {
         width: 70px;
         height: 70px;
+    }
+    footer li {
+        font-size: medium;
+        padding: 50px;
     }
     
 }
