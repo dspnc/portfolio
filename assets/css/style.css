@@ -231,14 +231,23 @@ footer a {
 }
 
 /* fixes header img distortion issue on mobile, and reduces footer font-size to prevent overflow */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
     #DSH {
         width: 70px;
         height: 70px;
     }
+    footer ul {
+        flex-direction: column;
+        margin-left: 10px;
+    }
     footer li {
+        align-self: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0;
+        padding-right: 0;
         font-size: medium;
-        padding: 50px;
+
     }
     
 }
