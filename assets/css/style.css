@@ -11,6 +11,7 @@ body {
     margin: 0;
 }
 
+/* made the header a flex container to wrap the name, pic, and nav bar depending on size */
 #main-header {
     padding: 2%;
     display: flex;
@@ -26,19 +27,20 @@ body {
     background-position: center;
 }
 
+/* made my name grow more and shrink more than the image, starting length at 40% */
 h1 {
     margin-left: 3%;
     align-self: center;
-    flex: 2 1 40%;
+    flex: 2 0 40%;
     padding: 5%;
 }
 
+/* made the image start at 20% length and max-width to prevent it from getting too big */
 #DSH {
     flex-basis: 20%;
     flex-shrink: 0;
     flex-grow: 0;
-    width: 10%;
-    height: 10;
+    max-width: 20%;
     margin-left: 5%;
     margin-right: 2%;
     margin-top: 3%;
@@ -46,12 +48,12 @@ h1 {
 }
 
 
+
 #main-header nav {
-    display: inline;
-    float: right;
     align-self: center;
-    margin-right: 5%;
+    margin-right: 3%;
     flex-shrink: 1;
+    flex-grow: 1;
 }
 
 #main-header ul {
@@ -96,10 +98,11 @@ article p {
 
 }
 
+/* used flexbox container around work cards */
 .work {
     display: flex;
     flex-wrap: wrap;
-    /* padding: 20px; */
+    padding: 20px;
     justify-content: space-evenly;
     color: aliceblue;
     font-size: x-large;
@@ -109,25 +112,25 @@ article p {
     border-bottom-color: var(--deepblue);
 }
 
+/* the padding set the initial size of the work cards, with a min-width to prevent them from stacking more than 2 on a row */
 .work section {
     padding: 200px;
     min-width: 45%;
     margin: 25px;
 }
 
-
+/* gave cards a flex basis length of 200px and made them grow more than the horiseon big card */
 .card {
     border-style: solid;
     border-width: 2px;
     border-radius: 10px;
     padding: 10px;
     flex: 1 2 200px;
-    min-width: 25%;
     margin-bottom: 30px;
 
 }
 
-
+/* set the horiseon card to be 800px and take up 100%width */
 #Horiseon-SEO {
     flex: 0 2 800px;
     min-width: 100%;
@@ -139,9 +142,12 @@ article p {
     background-image: url("../images/clouds.jpg");
     background-size: cover;
     color: aliceblue;
+    /* position relative so that the links can be absolute */
     position: relative;
 } 
 
+/* link classes for the entire cards to be clickable from the a tag */
+/* only 2 because the other 3 are placeholders for now, will add more as placeholders go to real links */
 .link, .link2 {
     position: absolute;
     width: 100%;
@@ -152,13 +158,14 @@ article p {
 
 }
 
-
+/* inserted backgroundimages, made position relative for the .link class to be absolute */
 #prework-study-guide {
     background-image: url("../images/darkclouds.jpg");
     background-size: cover;
     position: relative;
 }
 
+/* will need to set position to absolute when I replace the placeholders and add new link classes */
 #placeholder1 {
     background-image: url("../images/frothy-tide.jpg");
     background-size: cover;
@@ -202,12 +209,17 @@ footer a {
     
 }
 
-@media screen and (max-width: 768px) {
-    main {
-      flex-direction: column;
+/* used media query to put the nav on top of the h1 when the screen gets small enough, aesthetic purposes*/
+@media screen and (max-width: 720px) {
+    #main-header h1 {
+        order: 1;
     }
-  } 
+    #main-header nav {
+        margin-left: 10%;
+    }
+}
 
+/* sets the work cards to take up the whole width and form 1 column under 1042px */
 @media screen and (max-width: 1042px) {
     #prework-study-guide, #placeholder1, #placeholder2, #placeholder3 {
         width: 100%;
