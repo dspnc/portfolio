@@ -218,6 +218,8 @@ footer a {
     #DSH {
         align-self: center;
         order: 2;
+        max-height: 150px;
+        min-width: 130px;
     }
     #main-header h1 {
         order: 1;
