@@ -38,8 +38,9 @@ h1 {
 /* made the image start at 20% length and max-width to prevent it from getting too big */
 #DSH {
     flex-basis: 20%;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     flex-grow: 0;
+    height: auto;
     max-width: 20%;
     margin-left: 5%;
     margin-right: 2%;
@@ -211,11 +212,19 @@ footer a {
 
 /* used media query to put the nav on top of the h1 when the screen gets small enough, aesthetic purposes*/
 @media screen and (max-width: 720px) {
+    #main-header {
+        flex-direction: column;
+    }
+    #DSH {
+        align-self: center;
+        order: 2;
+    }
     #main-header h1 {
         order: 1;
     }
     #main-header nav {
         margin-left: 10%;
+        order: 3;
     }
 }
 
@@ -224,5 +233,17 @@ footer a {
     #prework-study-guide, #placeholder1, #placeholder2, #placeholder3 {
         width: 100%;
     }
+}
+
+/* handles the header and header image sizes at large screen widths */
+@media screen and (min-width: 1042px) {
+    #main-header {
+        max-height: 400px;
+    }
+    #DSH {
+        max-height: 215px;
+        max-width: 215px;
+    }
+    
 }
     
