@@ -22,3 +22,8 @@ I learned that flexbox is a tricky beast and sometimes seems to act in peculiar 
 MIT License
 
 ---
+
+Screenshot
+<img title="deployed portfolio" alt="Github Pages portfolio" src="/assets/images/screenshot-of-deploy.jpg">
+
+Link: https://dspnc.github.io/portfolio/
