@@ -230,6 +230,14 @@ footer a {
     }
 }
 
+@media screen and (max-width: 360px) {
+    #DSH {
+        width: 70px;
+        height: 70px;
+    }
+    
+}
+
 /* sets the work cards to take up the whole width and form 1 column under 1042px */
 @media screen and (max-width: 1042px) {
     #prework-study-guide, #placeholder1, #placeholder2, #placeholder3 {
